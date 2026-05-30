@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>ClaudeLab · autonomous strategy researcher</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#0b0f17;color:#e6edf3;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
+h1{font-size:24px;margin:0 0 2px} .sub{color:#8b949e;font-size:13px;margin-bottom:6px}
+.card{background:#11161f;border:1px solid #1f2733;border-radius:12px;padding:16px 18px;margin:14px 0}
+.h{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7d8590;margin-bottom:12px}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.stat{flex:1;min-width:120px;background:#0d121b;border:1px solid #1f2733;border-radius:10px;padding:12px 14px;text-align:center}
+.stat .n{font-size:24px;font-weight:700} .stat .l{font-size:10.5px;letter-spacing:.5px;color:#8b949e;text-transform:uppercase;margin-top:3px}
+.big{font-size:30px;font-weight:800} .pos{color:#3fb950} .neg{color:#f85149} .muted{color:#6e7681}
+table{width:100%;border-collapse:collapse;font-size:13px} td,th{padding:8px 8px;border-bottom:1px solid #1b2230;text-align:left}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.strat{border-left:3px solid #2f81f7;padding:8px 12px;margin:8px 0;background:#0d121b;border-radius:0 8px 8px 0}
+.srow{display:flex;align-items:center;gap:8px} .mech{color:#adbac7;font-size:13px;margin:4px 0} .nums{color:#8b949e;font-size:12px;font-family:ui-monospace,monospace}
+.badge{font-size:10px;font-weight:800;letter-spacing:.5px;padding:2px 7px;border-radius:6px;border:1px solid}
+.badge.live{color:#3fb950;border-color:#3fb95066} .badge.incubating{color:#d29922;border-color:#d2992266} .badge.validated{color:#2f81f7;border-color:#2f81f766}
+.dead{border-left:3px solid #6e2f2f;padding:7px 12px;margin:7px 0;background:#0d121b;border-radius:0 8px 8px 0}
+.drow{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline} .dwhy{color:#f0883e;font-size:12px} .dmech{color:#6e7681;font-size:12px;margin-top:2px}
+.explain{color:#adbac7;font-size:13.5px;border-left:2px solid #2f81f7;padding-left:12px}
+ul{margin:6px 0;padding-left:18px} li{margin:3px 0;font-size:13px}
+.foot{color:#6e7681;font-size:11.5px;text-align:center;margin-top:24px}
+a{color:#2f81f7}
+</style></head><body><div class="wrap">
+<h1>ClaudeLab <span class="muted" style="font-size:14px">· autonomous strategy researcher</span></h1>
+<div class="sub">An AI that <b>invents, tests, and curates its own trading strategies</b> — and trusts almost none of them. Paper only · independent of the live trading systems · updated 2026-05-30 13:57 SGT</div>
+
+<div class="card"><div class="h">◇ How it works</div><div class="explain">Each cycle it dreams up new strategy ideas, then puts each through a brutal <b>validation gauntlet</b> — out-of-sample testing, statistical significance, parameter robustness, and an <b>alpha gate</b> that demands the idea beat simply holding the market (so bull-market luck fails). Survivors face an adversarial <b>red-team</b> that tries to kill them. The few that pass are <b>incubated</b> (paper-traded forward with no money) and only promoted to the book if they keep working. Most ideas die — and that is the point. The graveyard below is the brain showing its work.</div></div>
+
+<div class="card"><div class="h">◇ Discovery funnel</div><div class="row"><div class="stat"><div class="n">5</div><div class="l">proposed</div></div><div class="stat"><div class="n">4</div><div class="l">killed · gauntlet</div></div><div class="stat"><div class="n">0</div><div class="l">killed · red-team</div></div><div class="stat"><div class="n">0</div><div class="l">retired · decay</div></div><div class="stat"><div class="n">1</div><div class="l">incubating</div></div><div class="stat"><div class="n">0</div><div class="l">LIVE</div></div></div></div>
+
+<div class="card"><div class="h">◇ Paper book</div><div class="row"><div class="stat"><div class="n big pos">$10,000</div><div class="l">equity (+0.00% from $10,000)</div></div><div class="stat"><div class="n">4</div><div class="l">open positions</div></div><div class="stat"><div class="n">0</div><div class="l">closed trades</div></div></div><table style="margin-top:12px"><thead><tr><th>strategy</th><th>ticker</th><th>dir</th><th class="r">entry</th><th class="r">target</th><th class="r">stop</th><th class="r">size</th></tr></thead><tbody><tr><td>stock_leader_momentum_</td><td><b>TSLA</b></td><td>long</td><td class="r">435.79</td><td class="r">480.731</td><td class="r">408.825</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>MSFT</b></td><td>long</td><td class="r">450.24</td><td class="r">485.508</td><td class="r">429.079</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>GOOGL</b></td><td>long</td><td class="r">380.34</td><td class="r">408.837</td><td class="r">363.242</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>AMZN</b></td><td>long</td><td class="r">270.64</td><td class="r">290.55</td><td class="r">258.694</td><td class="r">$300.0</td></tr></tbody></table></div>
+
+<div class="card"><div class="h">◇ Strategy population</div><div class="strat"><div class="srow"><span class="badge incubating">INCUBATING</span><b>Stock Leader Momentum (long)</b></div><div class="mech">Stocks leading the S&amp;P (high relative strength) with a bullish EMA stack above the 200-day tend to continue — institutional sponsorship persists. Enter on confirmed strength, cap RSI to avoid the most extended entries.</div><div class="nums">exp 1.228% · alpha 0.55%/trade (t 1.87) · PF 1.37 · t 3.78 · n 809</div></div></div>
+
+<div class="card"><div class="h">◇ Meta-learning — what it has learned about its own research</div><div class="nums" style="margin-bottom:8px">gate kills: multiple_testing: 4 · beats_benchmark: 4 · statistical_power: 3 · param_robustness: 3 · cost_realism: 3 · oos_holdout: 1</div><ul><li>Most common cause of death: &#x27;multiple_testing&#x27; (4 kills) — generate ideas that pre-empt it.</li></ul></div>
+
+<div class="card"><div class="h">⚰️ Graveyard — 4 rejected ideas (with autopsies)</div><div class="dead"><div class="drow"><b>Stock Leader Pullback (long)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, beats_benchmark</span></div><div class="dmech">A market leader (high relative strength vs SPY) in a confirmed uptrend (above the 200-EMA) that pulls back toward its 50-EMA with a reset RSI offers a better entry than chasing — institutional sponsor</div></div><div class="dead"><div class="drow"><b>Crypto Trend Breakdown (short)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">In a confirmed downtrend (bearish stack, below the 200-EMA, Supertrend not bullish), a feeble bounce that stalls below the 50-EMA tends to resume lower as trapped longs capitulate and shorts press. Sh</div></div><div class="dead"><div class="drow"><b>Crypto Momentum Continuation (long)</b><span class="dwhy">gauntlet · failed oos_holdout, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">Strong, confirmed momentum persists in crypto more than mean-reversion does on the daily: a bullish EMA stack above the 200-EMA, positive MACD histogram, and a volume-expansion bar signal real partici</div></div><div class="dead"><div class="drow"><b>Crypto Washout Reversion (long)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">A deep, fast washout (low RSI, price stretched well below the 20-EMA in ATR terms, washed-out heat) inside an intact higher-timeframe uptrend (above 200-EMA) tends to snap back: forced/leveraged selle</div></div></div>
+
+<div class="foot">ClaudeLab is an autonomous research experiment — paper only, not financial advice. It shares no data with the owner's live trading systems.</div>
+</div></body></html>
