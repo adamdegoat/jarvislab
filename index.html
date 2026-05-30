@@ -1,43 +1,76 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>ClaudeLab · autonomous strategy researcher</title>
+<title>ClaudeLab — autonomous strategy researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box} body{margin:0;background:#0b0f17;color:#e6edf3;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
-.wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
-h1{font-size:24px;margin:0 0 2px} .sub{color:#8b949e;font-size:13px;margin-bottom:6px}
-.card{background:#11161f;border:1px solid #1f2733;border-radius:12px;padding:16px 18px;margin:14px 0}
-.h{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#7d8590;margin-bottom:12px}
-.row{display:flex;flex-wrap:wrap;gap:10px}
-.stat{flex:1;min-width:120px;background:#0d121b;border:1px solid #1f2733;border-radius:10px;padding:12px 14px;text-align:center}
-.stat .n{font-size:24px;font-weight:700} .stat .l{font-size:10.5px;letter-spacing:.5px;color:#8b949e;text-transform:uppercase;margin-top:3px}
-.big{font-size:30px;font-weight:800} .pos{color:#3fb950} .neg{color:#f85149} .muted{color:#6e7681}
-table{width:100%;border-collapse:collapse;font-size:13px} td,th{padding:8px 8px;border-bottom:1px solid #1b2230;text-align:left}
+*{box-sizing:border-box}
+body{margin:0;background:#f7f8fa;color:#1f2937;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:44px 20px 90px}
+.brand{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#2563eb;font-weight:700}
+h1{font-size:29px;line-height:1.25;font-weight:800;letter-spacing:-0.5px;margin:8px 0 12px;color:#0f172a}
+.lede{font-size:16px;color:#475569;margin:0;max-width:660px}
+.meta{font-size:12.5px;color:#94a3b8;margin-top:16px}
+.pill{display:inline-block;font-size:11px;font-weight:600;color:#16a34a;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:20px;padding:2px 9px;margin-right:6px}
+section{margin-top:38px}
+.stitle{font-size:18px;font-weight:700;color:#0f172a;margin:0 0 3px}
+.ssub{font-size:13.5px;color:#64748b;margin:0 0 14px}
+.card{background:#fff;border:1px solid #e8eaed;border-radius:14px;padding:6px 20px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.statrow{display:flex;flex-wrap:wrap;gap:12px}
+.stat{flex:1;min-width:104px;background:#fff;border:1px solid #e8eaed;border-radius:12px;padding:15px 16px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.stat .n{font-size:25px;font-weight:800;color:#0f172a;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat .l{font-size:12px;color:#64748b;margin-top:4px}
+.pos{color:#16a34a} .neg{color:#dc2626} .muted{color:#94a3b8}
+.step{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #f1f3f5}
+.step:last-child{border-bottom:none}
+.num{flex:0 0 28px;height:28px;width:28px;border-radius:50%;background:#eff4ff;color:#2563eb;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step .t{font-weight:700;color:#0f172a;font-size:14.5px}
+.step .d{color:#475569;font-size:14px;margin-top:1px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:4px 0}
+th,td{padding:10px 6px;border-bottom:1px solid #f1f3f5;text-align:left}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;font-weight:600}
 td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
-.strat{border-left:3px solid #2f81f7;padding:8px 12px;margin:8px 0;background:#0d121b;border-radius:0 8px 8px 0}
-.srow{display:flex;align-items:center;gap:8px} .mech{color:#adbac7;font-size:13px;margin:4px 0} .nums{color:#8b949e;font-size:12px;font-family:ui-monospace,monospace}
-.badge{font-size:10px;font-weight:800;letter-spacing:.5px;padding:2px 7px;border-radius:6px;border:1px solid}
-.badge.live{color:#3fb950;border-color:#3fb95066} .badge.incubating{color:#d29922;border-color:#d2992266} .badge.validated{color:#2f81f7;border-color:#2f81f766}
-.dead{border-left:3px solid #6e2f2f;padding:7px 12px;margin:7px 0;background:#0d121b;border-radius:0 8px 8px 0}
-.drow{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline} .dwhy{color:#f0883e;font-size:12px} .dmech{color:#6e7681;font-size:12px;margin-top:2px}
-.explain{color:#adbac7;font-size:13.5px;border-left:2px solid #2f81f7;padding-left:12px}
-ul{margin:6px 0;padding-left:18px} li{margin:3px 0;font-size:13px}
-.foot{color:#6e7681;font-size:11.5px;text-align:center;margin-top:24px}
-a{color:#2f81f7}
+.strat{background:#fff;border:1px solid #e8eaed;border-left:3px solid #2563eb;border-radius:10px;padding:13px 16px;margin:11px 0}
+.srow{display:flex;align-items:center;gap:9px;flex-wrap:wrap} .srow b{color:#0f172a}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.3px;padding:3px 9px;border-radius:20px}
+.badge.live{color:#15803d;background:#ecfdf5} .badge.incubating{color:#b45309;background:#fffbeb} .badge.validated{color:#2563eb;background:#eff4ff}
+.mech{color:#374151;font-size:14px;margin:7px 0 6px}
+.nums{color:#64748b;font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.dead{background:#fff;border:1px solid #eef0f2;border-left:3px solid #e6a5a5;border-radius:10px;padding:11px 15px;margin:9px 0}
+.dead b{color:#334155} .dwhy{color:#b91c1c;font-size:12.5px} .dmech{color:#94a3b8;font-size:12.5px;margin-top:4px}
+ul.notes{margin:0;padding-left:18px} ul.notes li{margin:6px 0;color:#374151;font-size:14px}
+.note{font-size:13.5px;color:#64748b;margin:6px 0}
+.foot{margin-top:46px;padding-top:18px;border-top:1px solid #e8eaed;color:#94a3b8;font-size:12px;text-align:center;line-height:1.7}
+a{color:#2563eb;text-decoration:none}
+@media(max-width:560px){ h1{font-size:24px} .wrap{padding:30px 16px 60px} }
 </style></head><body><div class="wrap">
-<h1>ClaudeLab <span class="muted" style="font-size:14px">· autonomous strategy researcher</span></h1>
-<div class="sub">An AI that <b>invents, tests, and curates its own trading strategies</b> — and trusts almost none of them. Paper only · independent of the live trading systems · updated 2026-05-30 13:58 SGT</div>
 
-<div class="card"><div class="h">◇ How it works</div><div class="explain">Each cycle it dreams up new strategy ideas, then puts each through a brutal <b>validation gauntlet</b> — out-of-sample testing, statistical significance, parameter robustness, and an <b>alpha gate</b> that demands the idea beat simply holding the market (so bull-market luck fails). Survivors face an adversarial <b>red-team</b> that tries to kill them. The few that pass are <b>incubated</b> (paper-traded forward with no money) and only promoted to the book if they keep working. Most ideas die — and that is the point. The graveyard below is the brain showing its work.</div></div>
+<div class="brand">ClaudeLab</div>
+<h1>An AI that invents its own trading strategies — and trusts almost none of them.</h1>
+<p class="lede">Every day it dreams up new trading strategies, tests each one ruthlessly against years of market history, and keeps only the rare few that survive. Most get rejected. This page shows what it's testing, what earned a place, and what it threw out — and exactly why.</p>
+<div class="meta"><span class="pill">● Live</span> Paper trading only — no real money · runs on its own once a day · completely separate from the owner's live trading systems · updated 2026-05-30 14:07 SGT</div>
 
-<div class="card"><div class="h">◇ Discovery funnel</div><div class="row"><div class="stat"><div class="n">5</div><div class="l">proposed</div></div><div class="stat"><div class="n">4</div><div class="l">killed · gauntlet</div></div><div class="stat"><div class="n">0</div><div class="l">killed · red-team</div></div><div class="stat"><div class="n">0</div><div class="l">retired · decay</div></div><div class="stat"><div class="n">1</div><div class="l">incubating</div></div><div class="stat"><div class="n">0</div><div class="l">LIVE</div></div></div></div>
+<section><div class="stitle">Where things stand</div><div class="ssub">A snapshot of the research pipeline today.</div>
+<div class="statrow"><div class="stat"><div class="n">5</div><div class="l">ideas tested</div></div><div class="stat"><div class="n">4</div><div class="l">rejected</div></div><div class="stat"><div class="n">1</div><div class="l">in testing</div></div><div class="stat"><div class="n">0</div><div class="l">earned a place</div></div><div class="stat"><div class="n pos">$10,000</div><div class="l">paper equity (+0.00%)</div></div></div></section>
 
-<div class="card"><div class="h">◇ Paper book</div><div class="row"><div class="stat"><div class="n big pos">$10,000</div><div class="l">equity (+0.00% from $10,000)</div></div><div class="stat"><div class="n">4</div><div class="l">open positions</div></div><div class="stat"><div class="n">0</div><div class="l">closed trades</div></div></div><table style="margin-top:12px"><thead><tr><th>strategy</th><th>ticker</th><th>dir</th><th class="r">entry</th><th class="r">target</th><th class="r">stop</th><th class="r">size</th></tr></thead><tbody><tr><td>stock_leader_momentum_</td><td><b>TSLA</b></td><td>long</td><td class="r">435.79</td><td class="r">480.731</td><td class="r">408.825</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>MSFT</b></td><td>long</td><td class="r">450.24</td><td class="r">485.508</td><td class="r">429.079</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>GOOGL</b></td><td>long</td><td class="r">380.34</td><td class="r">408.837</td><td class="r">363.242</td><td class="r">$300.0</td></tr><tr><td>stock_leader_momentum_</td><td><b>AMZN</b></td><td>long</td><td class="r">270.64</td><td class="r">290.55</td><td class="r">258.694</td><td class="r">$300.0</td></tr></tbody></table></div>
+<section><div class="stitle">How it works</div><div class="ssub">Every idea has to survive this pipeline. Almost none do — and that's the whole point.</div>
+<div class="card"><div class="step"><div class="num">1</div><div><div class="t">Invent</div><div class="d">Proposes a brand-new strategy idea — and must give a real reason it should work, not just "the numbers fit."</div></div></div><div class="step"><div class="num">2</div><div><div class="t">Backtest</div><div class="d">Replays the idea trade-by-trade across years of real historical prices.</div></div></div><div class="step"><div class="num">3</div><div><div class="t">The gauntlet</div><div class="d">8 strict tests: it must be genuinely profitable, statistically real, work on data it never saw, survive trading costs, hold up when its settings are nudged — and crucially, <b>beat simply buying and holding the market</b> (so a lucky bull run isn't mistaken for skill).</div></div></div><div class="step"><div class="num">4</div><div><div class="t">Red-team</div><div class="d">AI critics actively try to <b>destroy</b> each survivor — is it overfit? is the logic real? will it stop working? It's rejected unless it survives them.</div></div></div><div class="step"><div class="num">5</div><div><div class="t">Incubate</div><div class="d">The rare survivor is paper-traded forward with <b>zero money</b>, to prove it still works on brand-new days it couldn't have been tuned on.</div></div></div><div class="step"><div class="num">6</div><div><div class="t">Promote or retire</div><div class="d">If it keeps working, it earns a slice of the paper book. If it fades, it's retired to the graveyard.</div></div></div></div></section>
 
-<div class="card"><div class="h">◇ Strategy population</div><div class="strat"><div class="srow"><span class="badge incubating">INCUBATING</span><b>Stock Leader Momentum (long)</b></div><div class="mech">Stocks leading the S&amp;P (high relative strength) with a bullish EMA stack above the 200-day tend to continue — institutional sponsorship persists. Enter on confirmed strength, cap RSI to avoid the most extended entries.</div><div class="nums">exp 1.228% · alpha 0.55%/trade (t 1.87) · PF 1.37 · t 3.78 · n 809</div></div></div>
+<section><div class="stitle">The paper book</div><div class="ssub">Strategies that earned their place trade here — on paper, with no real money. Equity starts at $10,000.</div>
+<div class="statrow" style="margin-bottom:14px">
+<div class="stat"><div class="n pos">$10,000</div><div class="l">paper equity (+0.00%)</div></div>
+<div class="stat"><div class="n">4</div><div class="l">open positions</div></div>
+<div class="stat"><div class="n">0</div><div class="l">closed trades</div></div></div>
+<div class="card"><table><thead><tr><th>ticker</th><th>direction</th><th class="r">entry</th><th class="r">target</th><th class="r">stop</th><th class="r">size</th></tr></thead><tbody><tr><td><b>TSLA</b></td><td>long</td><td class="r">435.79</td><td class="r">480.731</td><td class="r">408.825</td><td class="r">$300</td></tr><tr><td><b>MSFT</b></td><td>long</td><td class="r">450.24</td><td class="r">485.508</td><td class="r">429.079</td><td class="r">$300</td></tr><tr><td><b>GOOGL</b></td><td>long</td><td class="r">380.34</td><td class="r">408.837</td><td class="r">363.242</td><td class="r">$300</td></tr><tr><td><b>AMZN</b></td><td>long</td><td class="r">270.64</td><td class="r">290.55</td><td class="r">258.694</td><td class="r">$300</td></tr></tbody></table></div></section>
 
-<div class="card"><div class="h">◇ Meta-learning — what it has learned about its own research</div><div class="nums" style="margin-bottom:8px">gate kills: multiple_testing: 4 · beats_benchmark: 4 · statistical_power: 3 · param_robustness: 3 · cost_realism: 3 · oos_holdout: 1</div><ul><li>Most common cause of death: &#x27;multiple_testing&#x27; (4 kills) — generate ideas that pre-empt it.</li></ul></div>
+<section><div class="stitle">Strategies in testing</div><div class="ssub">Ideas that cleared the gauntlet and the red-team. "In testing" means it's being proven forward on new days before it's trusted with paper capital.</div>
+<div class="strat"><div class="srow"><span class="badge incubating">In testing</span><b>Stock Leader Momentum (long)</b></div><div class="mech">Stocks leading the S&amp;P (high relative strength) with a bullish EMA stack above the 200-day tend to continue — institutional sponsorship persists. Enter on confirmed strength, cap RSI to avoid the most extended entries.</div><div class="nums">avg 1.228%/trade · edge over market 0.55%/trade · win rate 47.3% · 809 historical trades</div></div></section>
 
-<div class="card"><div class="h">⚰️ Graveyard — 4 rejected ideas (with autopsies)</div><div class="dead"><div class="drow"><b>Stock Leader Pullback (long)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, beats_benchmark</span></div><div class="dmech">A market leader (high relative strength vs SPY) in a confirmed uptrend (above the 200-EMA) that pulls back toward its 50-EMA with a reset RSI offers a better entry than chasing — institutional sponsor</div></div><div class="dead"><div class="drow"><b>Crypto Trend Breakdown (short)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">In a confirmed downtrend (bearish stack, below the 200-EMA, Supertrend not bullish), a feeble bounce that stalls below the 50-EMA tends to resume lower as trapped longs capitulate and shorts press. Sh</div></div><div class="dead"><div class="drow"><b>Crypto Momentum Continuation (long)</b><span class="dwhy">gauntlet · failed oos_holdout, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">Strong, confirmed momentum persists in crypto more than mean-reversion does on the daily: a bullish EMA stack above the 200-EMA, positive MACD histogram, and a volume-expansion bar signal real partici</div></div><div class="dead"><div class="drow"><b>Crypto Washout Reversion (long)</b><span class="dwhy">gauntlet · failed statistical_power, multiple_testing, param_robustness, cost_realism, beats_benchmark</span></div><div class="dmech">A deep, fast washout (low RSI, price stretched well below the 20-EMA in ATR terms, washed-out heat) inside an intact higher-timeframe uptrend (above 200-EMA) tends to snap back: forced/leveraged selle</div></div></div>
+<section><div class="stitle">What it's learning about its own research</div><div class="ssub">The system studies its own track record — which kinds of ideas survive, and what keeps killing them — to get smarter over time.</div>
+<div class="card"><ul class="notes"><li>Most common cause of death: &#x27;multiple_testing&#x27; (4 kills) — generate ideas that pre-empt it.</li></ul></div></section>
 
-<div class="foot">ClaudeLab is an autonomous research experiment — paper only, not financial advice. It shares no data with the owner's live trading systems.</div>
+<section><div class="stitle">The graveyard — 4 rejected ideas</div><div class="ssub">Every idea it threw out, with the exact reason. This is the system showing its work — and why honest research rejects far more than it keeps.</div>
+<div class="dead"><b>Stock Leader Pullback (long)</b> <span class="dwhy">Failed the gauntlet: statistical power, multiple testing, beats benchmark</span><div class="dmech">A market leader (high relative strength vs SPY) in a confirmed uptrend (above the 200-EMA) that pulls back toward its 50-EMA with a reset RSI offers a better entry than chasing — institutional sponsorship persists but yo</div></div><div class="dead"><b>Crypto Trend Breakdown (short)</b> <span class="dwhy">Failed the gauntlet: statistical power, multiple testing, param robustness, cost realism, beats benchmark</span><div class="dmech">In a confirmed downtrend (bearish stack, below the 200-EMA, Supertrend not bullish), a feeble bounce that stalls below the 50-EMA tends to resume lower as trapped longs capitulate and shorts press. Short the failed bounc</div></div><div class="dead"><b>Crypto Momentum Continuation (long)</b> <span class="dwhy">Failed the gauntlet: oos holdout, multiple testing, param robustness, cost realism, beats benchmark</span><div class="dmech">Strong, confirmed momentum persists in crypto more than mean-reversion does on the daily: a bullish EMA stack above the 200-EMA, positive MACD histogram, and a volume-expansion bar signal real participation, so trends co</div></div><div class="dead"><b>Crypto Washout Reversion (long)</b> <span class="dwhy">Failed the gauntlet: statistical power, multiple testing, param robustness, cost realism, beats benchmark</span><div class="dmech">A deep, fast washout (low RSI, price stretched well below the 20-EMA in ATR terms, washed-out heat) inside an intact higher-timeframe uptrend (above 200-EMA) tends to snap back: forced/leveraged sellers exhaust and dip-b</div></div></section>
+
+<div class="foot">ClaudeLab is an autonomous research experiment — paper trading only, not financial advice.<br>It shares no data with the owner's live trading systems.</div>
 </div></body></html>
