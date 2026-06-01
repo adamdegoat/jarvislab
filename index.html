@@ -2,55 +2,60 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Jarvis Lab — autonomous strategy researcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
+:root{--ink:#e8eef7;--muted:#8a99b5;--dim:#5d6b86;--line:rgba(148,163,184,.13);--accent:#a855f7}
 *{box-sizing:border-box}
-body{margin:0;background:#f7f8fa;color:#1f2937;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+body{margin:0;background:#070b16;background-image:radial-gradient(900px 500px at 16% -8%,rgba(168,85,247,.10),transparent 60%),radial-gradient(820px 480px at 88% 4%,rgba(56,189,248,.08),transparent 62%),linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);background-size:auto,auto,44px 44px,44px 44px;background-attachment:fixed;color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
 .wrap{max-width:780px;margin:0 auto;padding:44px 20px 90px}
-.brand{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#2563eb;font-weight:700}
-h1{font-size:29px;line-height:1.25;font-weight:800;letter-spacing:-0.5px;margin:8px 0 12px;color:#0f172a}
-.lede{font-size:16px;color:#475569;margin:0;max-width:660px}
-.meta{font-size:12.5px;color:#94a3b8;margin-top:16px}
-.pill{display:inline-block;font-size:11px;font-weight:600;color:#16a34a;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:20px;padding:2px 9px;margin-right:6px}
+.brand{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-family:'Space Grotesk',sans-serif;font-size:28px;line-height:1.25;font-weight:700;letter-spacing:-.5px;margin:8px 0 12px;color:#fff}
+.lede{font-size:15px;color:var(--muted);margin:0;max-width:660px}
+.meta{font-size:12.5px;color:var(--dim);margin-top:16px}
+.pill{display:inline-flex;align-items:center;gap:5px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#22c55e;border-radius:20px;padding:2px 10px;font-size:11px;font-weight:600;margin-right:6px}
 section{margin-top:38px}
-.stitle{font-size:18px;font-weight:700;color:#0f172a;margin:0 0 3px}
-.ssub{font-size:13.5px;color:#64748b;margin:0 0 14px}
-.card{background:#fff;border:1px solid #e8eaed;border-radius:14px;padding:6px 20px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.stitle{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#fff;margin:0 0 3px}
+.ssub{font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.card{background:linear-gradient(180deg,rgba(22,32,53,.55),rgba(15,23,42,.5));border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.34);padding:18px 20px;margin-top:16px}
 .statrow{display:flex;flex-wrap:wrap;gap:12px}
-.stat{flex:1;min-width:104px;background:#fff;border:1px solid #e8eaed;border-radius:12px;padding:15px 16px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
-.stat .n{font-size:25px;font-weight:800;color:#0f172a;font-variant-numeric:tabular-nums;line-height:1.1}
-.stat .l{font-size:12px;color:#64748b;margin-top:4px}
-.pos{color:#16a34a} .neg{color:#dc2626} .muted{color:#94a3b8}
-.step{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #f1f3f5}
+.stat{flex:1;min-width:104px;background:rgba(148,163,184,.05);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+.stat .n{font-size:24px;font-weight:800;color:var(--ink);font-family:'IBM Plex Mono',monospace;line-height:1.1}
+.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4px;margin-top:4px}
+.pos{color:#22c55e} .neg{color:#f43f5e} .muted{color:var(--muted)}
+.step{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(148,163,184,.08)}
 .step:last-child{border-bottom:none}
-.num{flex:0 0 28px;height:28px;width:28px;border-radius:50%;background:#eff4ff;color:#2563eb;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
-.step .t{font-weight:700;color:#0f172a;font-size:14.5px}
-.step .d{color:#475569;font-size:14px;margin-top:1px}
+.num{flex:0 0 28px;height:28px;width:28px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#38bdf8);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.step .t{font-weight:700;color:var(--ink);font-size:14.5px}
+.step .d{color:var(--muted);font-size:13.5px;margin-top:1px}
 table{width:100%;border-collapse:collapse;font-size:13.5px;margin:4px 0}
-th,td{padding:10px 6px;border-bottom:1px solid #f1f3f5;text-align:left}
-th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;font-weight:600}
-td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
-.strat{background:#fff;border:1px solid #e8eaed;border-left:3px solid #2563eb;border-radius:10px;padding:13px 16px;margin:11px 0}
-.srow{display:flex;align-items:center;gap:9px;flex-wrap:wrap} .srow b{color:#0f172a}
+th,td{padding:10px 6px;text-align:left}
+th{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--dim);font-weight:600;border-bottom:1px solid var(--line)}
+td{border-bottom:1px solid rgba(148,163,184,.08);color:var(--ink)}
+td.r,th.r{text-align:right;font-family:'IBM Plex Mono',monospace}
+.strat{background:linear-gradient(180deg,rgba(22,32,53,.55),rgba(15,23,42,.5));border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:13px 16px;margin:11px 0}
+.srow{display:flex;align-items:center;gap:9px;flex-wrap:wrap} .srow b{color:var(--ink)}
 .badge{font-size:10.5px;font-weight:700;letter-spacing:.3px;padding:3px 9px;border-radius:20px}
-.badge.live{color:#15803d;background:#ecfdf5} .badge.incubating{color:#b45309;background:#fffbeb} .badge.validated{color:#2563eb;background:#eff4ff}
-.mech{color:#374151;font-size:14px;margin:7px 0 6px}
-.nums{color:#64748b;font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.dead{background:#fff;border:1px solid #eef0f2;border-left:3px solid #e6a5a5;border-radius:10px;padding:11px 15px;margin:9px 0}
-.dead b{color:#334155} .dwhy{color:#b91c1c;font-size:12.5px} .dmech{color:#94a3b8;font-size:12.5px;margin-top:4px}
-ul.notes{margin:0;padding-left:18px} ul.notes li{margin:6px 0;color:#374151;font-size:14px}
-.note{font-size:13.5px;color:#64748b;margin:6px 0}
-.foot{margin-top:46px;padding-top:18px;border-top:1px solid #e8eaed;color:#94a3b8;font-size:12px;text-align:center;line-height:1.7}
-a{color:#2563eb;text-decoration:none}
+.badge.live{color:#22c55e;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3)}
+.badge.incubating{color:#f59e0b;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3)}
+.badge.validated{color:#38bdf8;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3)}
+.mech{color:#c2cde0;font-size:13.5px;margin:7px 0 6px}
+.nums{color:var(--muted);font-size:12.5px;font-family:'IBM Plex Mono',monospace}
+.dead{background:rgba(244,63,94,.05);border:1px solid rgba(244,63,94,.15);border-left:3px solid #f43f5e;border-radius:10px;padding:11px 15px;margin:9px 0}
+.dead b{color:var(--ink)} .dwhy{color:#f87171;font-size:12.5px} .dmech{color:var(--dim);font-size:12.5px;margin-top:4px}
+ul.notes{margin:0;padding-left:18px} ul.notes li{margin:6px 0;color:#c2cde0;font-size:13.5px}
+.note{font-size:13.5px;color:var(--muted);margin:6px 0}
+.foot{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:11.5px;text-align:center;line-height:1.9}
+a{color:var(--accent);text-decoration:none}
 @media(max-width:560px){ h1{font-size:24px} .wrap{padding:30px 16px 60px} }
 </style></head><body><div class="wrap">
 
+<a href="https://adamdegoat.github.io/jarvis/" style="color:#8a99b5;font-size:12.5px;text-decoration:none;margin-bottom:16px;display:inline-block">← Jarvis Hub</a>
 <div style="display:flex;align-items:center;gap:10px;margin-bottom:2px">
-<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" style="flex:none;border-radius:7px;box-shadow:0 1px 3px rgba(15,23,42,.18)"><defs><linearGradient id="bl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4079"/><stop offset="1" stop-color="#0e1a35"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#bl)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
+<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" style="flex:none;border-radius:7px;box-shadow:0 1px 3px rgba(15,23,42,.18)"><defs><linearGradient id="bl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#1e1b4b"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#bl)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
 <div class="brand" style="margin:0">Jarvis Lab</div></div>
 <h1>An AI that invents its own trading strategies — and trusts almost none of them.</h1>
 <p class="lede">Every day it dreams up new trading strategies, tests each one ruthlessly against years of market history, and keeps only the rare few that survive. Most get rejected. This page shows what it's testing, what earned a place, and what it threw out — and exactly why.</p>
-<div class="meta"><span class="pill">● Live</span> Paper trading only — no real money · runs on its own once a day · completely separate from the owner's live trading systems · updated 2026-06-01 06:06 SGT</div>
+<div class="meta"><span class="pill">● Live</span> Paper trading only — no real money · runs on its own once a day · completely separate from the owner's live trading systems · updated 2026-06-01 12:49 SGT</div>
 
 <section><div class="stitle">Where things stand</div><div class="ssub">A snapshot of the research pipeline today.</div>
 <div class="statrow"><div class="stat"><div class="n">11</div><div class="l">ideas tested</div></div><div class="stat"><div class="n">10</div><div class="l">rejected</div></div><div class="stat"><div class="n">1</div><div class="l">in testing</div></div><div class="stat"><div class="n">0</div><div class="l">earned a place</div></div><div class="stat"><div class="n pos">$10,000</div><div class="l">paper equity (+0.00%)</div></div></div></section>
